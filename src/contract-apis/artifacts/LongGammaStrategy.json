@@ -1,0 +1,482 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "contract StrandsVault",
+        "name": "_vault",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "_underlier",
+        "type": "string"
+      },
+      {
+        "internalType": "address",
+        "name": "_oneClicksAddress",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newAdmin",
+        "type": "address"
+      }
+    ],
+    "name": "AdminAdded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "oldAdmin",
+        "type": "address"
+      }
+    ],
+    "name": "AdminRemoved",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "expiry",
+        "type": "uint256"
+      }
+    ],
+    "name": "_isValidExpiry",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "isValid",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newAdmin",
+        "type": "address"
+      }
+    ],
+    "name": "addAdmin",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "board",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "expiry",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "iv",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "frozen",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "hedgeType",
+        "type": "uint256"
+      }
+    ],
+    "name": "deltaHedge",
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "",
+        "type": "int256"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "strikeId",
+        "type": "uint256"
+      }
+    ],
+    "name": "doTrade",
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "balChange",
+        "type": "int256"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "positionIds",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "emergencyCloseAll",
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "balChange",
+        "type": "int256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "hasOpenPosition",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_Admin",
+        "type": "address"
+      }
+    ],
+    "name": "isAdmin",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "strikeId",
+        "type": "uint256"
+      }
+    ],
+    "name": "isValidStrike",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "isValid",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "oneClicks",
+    "outputs": [
+      {
+        "internalType": "contract OneClicks",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "closeAmount",
+        "type": "uint256"
+      }
+    ],
+    "name": "reducePosition",
+    "outputs": [
+      {
+        "internalType": "int256",
+        "name": "balChange",
+        "type": "int256"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "positionIds",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "oldAdmin",
+        "type": "address"
+      }
+    ],
+    "name": "removeAdmin",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "returnFundsToVault",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_boardId",
+        "type": "uint256"
+      }
+    ],
+    "name": "setBoard",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "roundEnds",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_oneClicksAddress",
+        "type": "address"
+      }
+    ],
+    "name": "setOneClicks",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "minTimeToExpiry",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxTimeToExpiry",
+            "type": "uint256"
+          },
+          {
+            "internalType": "int256",
+            "name": "targetStraddleDelta",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxDeltaGap",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxVol",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minTradeInterval",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "minDeltaToHedge",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxUnhedgedInterval",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxTradeUtilization",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "timeBetweenRoundEndAndExpiry",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct LongGammaStrategy.LongGammaStrategyDetail",
+        "name": "_longGammaStrategy",
+        "type": "tuple"
+      }
+    ],
+    "name": "setStrategyDetail",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "shouldWeHedge",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "int256",
+        "name": "",
+        "type": "int256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "strategyDetail",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "minTimeToExpiry",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxTimeToExpiry",
+        "type": "uint256"
+      },
+      {
+        "internalType": "int256",
+        "name": "targetStraddleDelta",
+        "type": "int256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxDeltaGap",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxVol",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minTradeInterval",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "minDeltaToHedge",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxUnhedgedInterval",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "maxTradeUtilization",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timeBetweenRoundEndAndExpiry",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "underlier",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "vault",
+    "outputs": [
+      {
+        "internalType": "contract StrandsVault",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
