@@ -36,8 +36,8 @@ Note that the entire user interface was designed and coded by me, [platocrat](ht
         https://strands.finance
       </a>
     </em>
-    <div style="margin-bottom: 24px">
-    </div>
+    <br />
+    <br />
   </caption>
 </div>
 
@@ -56,8 +56,8 @@ Note that the entire user interface was designed and coded by me, [platocrat](ht
         https://strands.finance
       </a>
     </em>
-    <div style="margin-bottom: 24px">
-    </div>
+    <br />
+    <br />
   </caption>
 </div>
 
